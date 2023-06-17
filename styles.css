@@ -66,6 +66,14 @@ body {
     margin-bottom: 15px;
 }
 
+.contact-info__block--center {
+    align-items: center;
+}
+
+.contact-info__block--right {
+    align-items: flex-end;
+}
+
 @media screen and (width <= 576px) {
     .main-info,
     .contact_info_container {
@@ -82,6 +90,17 @@ body {
 
     .experiences {
         margin-right: 0;
+    }
+    .contact-info__block--center {
+    align-items: center;
+    }
+
+    .contact-info__block--right {
+        align-items: center;
+    }
+
+    .contact-info__block--left {
+        align-items: center;
     }
 }
 
@@ -107,10 +126,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.contact-info__block--center {
-    justify-content: center;
+    max-width: 300px;
+    width: 100%;
 }
 
 .contact-info__item {
@@ -118,6 +135,15 @@ body {
     text-decoration: none;
     display: flex;
     justify-content: start;
+    transition: .3s;
+}
+
+.contact-info__item:hover {
+    color: var(--text-decoration-color)
+}
+
+.contact-info__item:hover .contact-info__item-icon path{
+    fill: var(--text-decoration-color)
 }
 
 .contact-info__item:not(:last-child) {
@@ -129,10 +155,12 @@ body {
     width: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .contact-info__item-icon path {
     fill: var(--icon-color);
+    transition: .3s;
 }
 
 .contact-info__item-icon {
